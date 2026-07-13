@@ -53,7 +53,7 @@ export default function EducationAndExperience() {
       title: "Cybersecurity Analyst Co-op",
       company: "Massachusetts State Lottery Commission",
       location: "Braintree, MA",
-      duration: "July 2025 - December 2025",
+      duration: "July 2025 - Present",
       type: "Co-op",
       details: [
         "Conduct vulnerability management using Tenable, scanning and prioritizing vulnerabilities, and creating ServiceNow tickets for remediation by the networking team",
