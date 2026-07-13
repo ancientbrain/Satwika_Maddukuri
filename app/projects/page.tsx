@@ -1,15 +1,18 @@
 "use client"
 
-import { Github, FileText, Code, Shield, Database, Network, Server, Cpu, ChevronDown } from "lucide-react"
+import { Linkedin, Github, Mail } from "lucide-react"
+import { FileText, Code, Shield, Database, Network, Server, Cpu, ChevronDown } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import BackgroundAnimation from "../components/background-animation"
 import { useState } from "react"
 
 export default function Projects() {
+  console.log("[v0] Projects component rendering")
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
 
   const toggleCategory = (title: string) => {
+    console.log("[v0] Toggling category:", title)
     setExpandedCategory(expandedCategory === title ? null : title)
   }
 
@@ -84,7 +87,6 @@ export default function Projects() {
           sources: ["MS Information Systems", "Mastercard Virtual Experience"],
         },
         { name: "Incident Response", sources: ["ISC2 CC", "Mastercard Virtual Experience"] },
-        { name: "Penetration Testing", sources: ["MS Information Systems", "TryHackMe"] },
         { name: "Security Auditing", sources: ["ISC2 CC", "Tata Cybersecurity Simulation"] },
         {
           name: "Access Control",
@@ -92,7 +94,12 @@ export default function Projects() {
         },
         { name: "Risk Assessment", sources: ["MS Information Systems", "ISC2 CC"] },
         { name: "Threat Intelligence", sources: ["Zero Trust Network Security Project"] },
-        { name: "OSINT Research", sources: ["Zero Trust Network Security Project"] },
+        { name: "Access Controls Concepts", sources: ["ISC2 CC"] },
+        { name: "Business Continuity (BC) Concepts", sources: ["ISC2 CC"] },
+        { name: "Disaster Recovery (DR) Concepts", sources: ["ISC2 CC"] },
+        { name: "Incident Response Concepts", sources: ["ISC2 CC"] },
+        { name: "Security Operations", sources: ["ISC2 CC"] },
+        { name: "Security Principles", sources: ["ISC2 CC"] },
       ],
     },
     {
@@ -157,9 +164,12 @@ export default function Projects() {
     },
   ]
 
+  console.log("[v0] Skill categories loaded:", skillCategories.length)
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-950 via-blue-950 to-slate-950 pt-16">
       <BackgroundAnimation />
+      {console.log("[v0] Main content rendering")}
       <div className="container mx-auto px-4 py-20">
         {/* Projects Section */}
         <motion.div
@@ -319,6 +329,38 @@ export default function Projects() {
           </div>
         </motion.div>
       </div>
+
+      {/* Footer with Social Links */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="flex flex-col items-center gap-6">
+          <div className="flex justify-center space-x-8">
+            <a
+              href="https://www.linkedin.com/in/satwikamaddukuri/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 text-gray-400 transition-colors hover:text-blue-400"
+            >
+              <Linkedin className="h-7 w-7 transition-transform group-hover:scale-110" />
+              <span className="sr-only">LinkedIn Profile</span>
+            </a>
+            <a
+              href="https://github.com/ancientbrain"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 text-gray-400 transition-colors hover:text-blue-400"
+            >
+              <Github className="h-7 w-7 transition-transform group-hover:scale-110" />
+              <span className="sr-only">GitHub Profile</span>
+            </a>
+          </div>
+          <div className="flex items-center gap-2 text-gray-400">
+            <Mail className="h-4 w-4" />
+            <a href="mailto:satwikam2129@gmail.com" className="text-sm hover:text-blue-400 transition-colors">
+              satwikam2129@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
     </main>
   )
 }
@@ -337,4 +379,3 @@ function getSourceColor(source: string): string {
     return "bg-gray-400/20 text-gray-300" // Other sources
   }
 }
-

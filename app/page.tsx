@@ -98,9 +98,10 @@ export default function Home() {
                 </h1>
                 <p className="mb-6 text-xl text-blue-300">Information Systems Graduate Student</p>
                 <p className="mb-8 text-gray-400 leading-relaxed">
-                  I'm a graduate student pursuing a Master of Science in Information Systems. While I'm skilled in the
-                  technical side of cybersecurity 🕵️‍♀️🔒, I'm equally passionate about operations, management, and
-                  strategic planning—bridging the gap between tech and leadership.
+                  I'm a Master's student in Information Systems, basically leveling up my cybersecurity skills like it's
+                  a boss fight. 🕵️‍♀️🔒 While I can talk firewalls and threat detection all day, I also love the
+                  behind-the-scenes action—operations, management, and strategy. Think of me as the bridge between tech
+                  wizards and business brains, making sure security isn't just strong but also smart!
                 </p>
                 <Button variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-400/10" asChild>
                   <a
@@ -233,4 +234,3 @@ export default function Home() {
     </main>
   )
 }
-

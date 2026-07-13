@@ -1,6 +1,6 @@
 "use client"
 
-import { Award, Calendar, ExternalLink, Shield, CheckCircle2, Cpu, Network } from "lucide-react"
+import { Award, Calendar, ExternalLink, Shield, CheckCircle2, Cpu, Network, Linkedin, Github, Mail } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
@@ -13,12 +13,22 @@ export default function Certifications() {
     date: "Certified Since: 2024",
     validityPeriod: "May 1, 2024 - Apr 30, 2027",
     description:
-      "Having met all of the certification requirements, adoption of the ISC2 Code of Ethics, and successful performance on the required competency examination, subject to recertification every three years.",
+      "Earned the ISC2 Certified in Cybersecurity (CC) certification, validating my expertise in foundational security principles, risk management, access control, and network security. This certification showcases my commitment to cybersecurity and ability to implement key security best practices in real-world scenarios. 🚀",
     accreditations: [
       "ANSI National Accreditation Board (ANAB) Accredited",
       "Globally Recognized Cybersecurity Certification",
       "Subject to ISC2 Code of Ethics and Bylaws",
     ],
+    domains: [
+      "Access Controls Concepts",
+      "Business Continuity (BC) Concepts",
+      "Disaster Recovery (DR) Concepts",
+      "Incident Response Concepts",
+      "Network Security",
+      "Security Operations",
+      "Security Principles",
+    ],
+    credlyLink: "https://www.credly.com/badges/9ab744a9-09e1-4321-a9f4-a40fd83081fc/linked_in_profile",
   }
 
   const forageCertifications = [
@@ -111,6 +121,17 @@ export default function Certifications() {
                   </div>
 
                   <div className="space-y-2">
+                    <h3 className="font-medium text-blue-400">Domains Covered</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {isc2Certification.domains.map((domain, i) => (
+                        <span key={i} className="rounded-full bg-blue-400/10 px-3 py-1 text-sm text-blue-400">
+                          {domain}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
                     <h3 className="font-medium text-blue-400">Accreditations & Recognition</h3>
                     <ul className="grid gap-2">
                       {isc2Certification.accreditations.map((item, index) => (
@@ -123,17 +144,15 @@ export default function Certifications() {
                   </div>
                 </div>
 
-                <Button variant="outline" className="w-full border-blue-400 text-blue-400 hover:bg-blue-400/10" asChild>
-                  <a
-                    href="https://www.credly.com/badges/verify"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2"
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                    Verify Certificate
-                  </a>
-                </Button>
+                <a
+                  href={isc2Certification.credlyLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative z-20 flex items-center justify-center gap-2 w-full py-2 px-4 rounded-md border border-blue-400 text-blue-400 bg-transparent hover:bg-blue-400/10 transition-colors cursor-pointer"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Verify Certificate
+                </a>
               </CardContent>
             </Card>
           </motion.div>
@@ -204,21 +223,16 @@ export default function Certifications() {
                         ))}
                       </div>
                     </div>
-                    <Button
-                      variant="outline"
-                      className="w-full border-blue-400 text-blue-400 hover:bg-blue-400/10 mt-4"
-                      asChild
+
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative z-20 flex items-center justify-center gap-2 w-full py-2 px-4 mt-4 rounded-md border border-blue-400 text-blue-400 bg-transparent hover:bg-blue-400/10 transition-colors cursor-pointer"
                     >
-                      <a
-                        href={cert.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2"
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                        Verify Certificate
-                      </a>
-                    </Button>
+                      <ExternalLink className="h-4 w-4" />
+                      Verify Certificate
+                    </a>
                   </CardContent>
                 </Card>
               ))}
@@ -226,7 +240,37 @@ export default function Certifications() {
           </motion.div>
         </div>
       </div>
+      {/* Footer with Social Links */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="flex flex-col items-center gap-6">
+          <div className="flex justify-center space-x-8">
+            <a
+              href="https://www.linkedin.com/in/satwikamaddukuri/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 text-gray-400 transition-colors hover:text-blue-400"
+            >
+              <Linkedin className="h-7 w-7 transition-transform group-hover:scale-110" />
+              <span className="sr-only">LinkedIn Profile</span>
+            </a>
+            <a
+              href="https://github.com/ancientbrain"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 text-gray-400 transition-colors hover:text-blue-400"
+            >
+              <Github className="h-7 w-7 transition-transform group-hover:scale-110" />
+              <span className="sr-only">GitHub Profile</span>
+            </a>
+          </div>
+          <div className="flex items-center gap-2 text-gray-400">
+            <Mail className="h-4 w-4" />
+            <a href="mailto:satwikam2129@gmail.com" className="text-sm hover:text-blue-400 transition-colors">
+              satwikam2129@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
     </main>
   )
 }
-
