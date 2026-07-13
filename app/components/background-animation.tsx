@@ -82,4 +82,3 @@ export default function BackgroundAnimation() {
 
   return <canvas ref={canvasRef} className="fixed inset-0 h-full w-full pointer-events-none z-0" aria-hidden="true" />
 }
-

@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import { Code2, ExternalLink, Target, Shield, Binary, Briefcase } from "lucide-react"
+import { Code2, ExternalLink, Target, Shield, Binary, Briefcase, Linkedin, Github, Mail } from "lucide-react"
 
 export default function Profiles() {
   const platforms = [
@@ -120,7 +120,37 @@ export default function Profiles() {
           </div>
         </motion.div>
       </div>
+      {/* Footer with Social Links */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="flex flex-col items-center gap-6">
+          <div className="flex justify-center space-x-8">
+            <a
+              href="https://www.linkedin.com/in/satwikamaddukuri/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 text-gray-400 transition-colors hover:text-blue-400"
+            >
+              <Linkedin className="h-7 w-7 transition-transform group-hover:scale-110" />
+              <span className="sr-only">LinkedIn Profile</span>
+            </a>
+            <a
+              href="https://github.com/ancientbrain"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 text-gray-400 transition-colors hover:text-blue-400"
+            >
+              <Github className="h-7 w-7 transition-transform group-hover:scale-110" />
+              <span className="sr-only">GitHub Profile</span>
+            </a>
+          </div>
+          <div className="flex items-center gap-2 text-gray-400">
+            <Mail className="h-4 w-4" />
+            <a href="mailto:satwikam2129@gmail.com" className="text-sm hover:text-blue-400 transition-colors">
+              satwikam2129@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
     </main>
   )
 }
-

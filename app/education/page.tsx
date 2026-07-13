@@ -6,13 +6,14 @@ import {
   MapPin,
   Briefcase,
   Building2,
-  ExternalLink,
   Sparkles,
   ChevronRight,
+  Linkedin,
+  Github,
+  Mail,
 } from "lucide-react"
 import { motion } from "framer-motion"
 import { useRef } from "react"
-import { Button } from "@/components/ui/button"
 import BackgroundAnimation from "../components/background-animation"
 
 export default function EducationAndExperience() {
@@ -49,6 +50,22 @@ export default function EducationAndExperience() {
 
   const experience = [
     {
+      title: "Cybersecurity Analyst Co-op",
+      company: "Massachusetts State Lottery Commission",
+      location: "Braintree, MA",
+      duration: "July 2025 - Present",
+      type: "Co-op",
+      details: [
+        "Conduct vulnerability management using Tenable, scanning and prioritizing vulnerabilities, and creating ServiceNow tickets for remediation by the networking team",
+        "Authored detailed patch memos and collaborated with IT staff via Microsoft Teams to clarify mitigation steps and ensure timely resolution",
+        "Implemented a Jira–Tenable exception tracking workflow to improve visibility and follow-up for vulnerabilities requiring extended remediation",
+        "Supported threat detection operations by investigating alerts, conducting research, and verifying findings across tools such as Recorded Future, Splunk, and Microsoft Defender; documented results with analyst notes",
+        "Designed and maintained structured documentation repositories on SharePoint, including developing guides, standards, and approval workflows using Power Automate",
+        "Authored playbooks and remediation reports to standardize alert response and operational workflows",
+      ],
+      link: "#",
+    },
+    {
       title: "Operations Intern",
       company: "Suvidha Foundation",
       location: "India",
@@ -59,6 +76,20 @@ export default function EducationAndExperience() {
         "Generated actionable insights by analyzing operational data and producing dynamic reports on key trends",
         "Coordinated with cross-functional teams and external stakeholders to facilitate seamless communication and problem resolution",
         "Organized comprehensive documentation and structured records to enhance accessibility and streamline processes",
+      ],
+      link: "#",
+    },
+    {
+      title: "Intern",
+      company: "Verzeo",
+      location: "India · Remote",
+      duration: "June 2022 - July 2022 · 2 mos",
+      type: "Internship",
+      details: [
+        "Focused on Cloud Computing and Azure cloud technologies",
+        "Deployed and managed cloud infrastructure using Microsoft Azure services",
+        "Implemented cloud security best practices and monitoring solutions",
+        "Collaborated with team members on cloud migration strategies and optimization",
       ],
       link: "#",
     },
@@ -227,11 +258,6 @@ export default function EducationAndExperience() {
                           </div>
                           <p className="text-lg font-medium text-gray-300">{exp.company}</p>
                         </div>
-                        <Button variant="ghost" size="sm" className="text-blue-400 hover:bg-blue-400/10" asChild>
-                          <a href={exp.link} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="h-4 w-4" />
-                          </a>
-                        </Button>
                       </div>
                       <div className="space-y-1 text-sm text-gray-400">
                         <div className="flex items-center gap-2">
@@ -261,7 +287,37 @@ export default function EducationAndExperience() {
           </section>
         </div>
       </div>
+      {/* Footer with Social Links */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="flex flex-col items-center gap-6">
+          <div className="flex justify-center space-x-8">
+            <a
+              href="https://www.linkedin.com/in/satwikamaddukuri/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 text-gray-400 transition-colors hover:text-blue-400"
+            >
+              <Linkedin className="h-7 w-7 transition-transform group-hover:scale-110" />
+              <span className="sr-only">LinkedIn Profile</span>
+            </a>
+            <a
+              href="https://github.com/ancientbrain"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 text-gray-400 transition-colors hover:text-blue-400"
+            >
+              <Github className="h-7 w-7 transition-transform group-hover:scale-110" />
+              <span className="sr-only">GitHub Profile</span>
+            </a>
+          </div>
+          <div className="flex items-center gap-2 text-gray-400">
+            <Mail className="h-4 w-4" />
+            <a href="mailto:satwikam2129@gmail.com" className="text-sm hover:text-blue-400 transition-colors">
+              satwikam2129@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
     </main>
   )
 }
-
