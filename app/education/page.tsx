@@ -50,18 +50,16 @@ export default function EducationAndExperience() {
 
   const experience = [
     {
-      title: "Cybersecurity Analyst Co-op",
+      title: "Cybersecurity CO-OP",
       company: "Massachusetts State Lottery Commission",
-      location: "Braintree, MA",
-      duration: "July 2025 - Present",
+      location: "Massachusetts",
+      duration: "July 2025 - December 2025",
       type: "Co-op",
       details: [
-        "Conduct vulnerability management using Tenable, scanning and prioritizing vulnerabilities, and creating ServiceNow tickets for remediation by the networking team",
-        "Authored detailed patch memos and collaborated with IT staff via Microsoft Teams to clarify mitigation steps and ensure timely resolution",
-        "Implemented a Jira–Tenable exception tracking workflow to improve visibility and follow-up for vulnerabilities requiring extended remediation",
-        "Supported threat detection operations by investigating alerts, conducting research, and verifying findings across tools such as Recorded Future, Splunk, and Microsoft Defender; documented results with analyst notes",
-        "Designed and maintained structured documentation repositories on SharePoint, including developing guides, standards, and approval workflows using Power Automate",
-        "Authored playbooks and remediation reports to standardize alert response and operational workflows",
+        "Working as a Cybersecurity Analyst co-op, supporting security operations and monitoring",
+        "Assisting with threat detection, incident response, and vulnerability assessments",
+        "Collaborating with the security team to strengthen access controls and network defenses",
+        "Contributing to security documentation and compliance efforts",
       ],
       link: "#",
     },
