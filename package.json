@@ -69,5 +69,11 @@
     "postcss": "^8.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
+  },
+  "pnpm": {
+    "overrides": {
+      "motion-dom": "12.23.23",
+      "motion-utils": "12.23.6"
+    }
   }
 }
