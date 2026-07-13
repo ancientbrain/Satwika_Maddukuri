@@ -50,20 +50,6 @@ export default function EducationAndExperience() {
 
   const experience = [
     {
-      title: "Cybersecurity CO-OP",
-      company: "Massachusetts State Lottery Commission",
-      location: "Massachusetts",
-      duration: "July 2025 - December 2025",
-      type: "Co-op",
-      details: [
-        "Working as a Cybersecurity Analyst co-op, supporting security operations and monitoring",
-        "Assisting with threat detection, incident response, and vulnerability assessments",
-        "Collaborating with the security team to strengthen access controls and network defenses",
-        "Contributing to security documentation and compliance efforts",
-      ],
-      link: "#",
-    },
-    {
       title: "Operations Intern",
       company: "Suvidha Foundation",
       location: "India",
