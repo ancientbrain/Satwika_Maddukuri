@@ -1,7 +1,7 @@
 "use client"
 
 import { Linkedin, Github, Mail } from "lucide-react"
-import { FileText, Code, Shield, Database, Network, Server, Cpu, ChevronDown } from "lucide-react"
+import { FileText, Code, Shield, Database, Network, Server, Cpu, ChevronDown, ExternalLink } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import BackgroundAnimation from "../components/background-animation"
@@ -17,6 +17,29 @@ export default function Projects() {
   }
 
   const projects = [
+    {
+      title: "Behavrix — Human Risk Intelligence Platform",
+      description:
+        "An AI-powered behavioral risk assessment tool on the Madison Framework that analyzes 270 real cybersecurity records to generate tailored Human Risk Reports for any organization type in under 90 seconds. Identified which human behavior patterns make security teams most vulnerable — mapping 4 behavioral archetypes to MITRE ATT&CK techniques — without a per-seat subscription or enterprise contract.",
+      technologies: [
+        "n8n",
+        "Gemini AI",
+        "Streamlit",
+        "Python",
+        "MITRE ATT&CK",
+        "Cybersecurity",
+        "AI",
+        "Madison Framework",
+        "GRC",
+        "Human Risk",
+        "Behavioral Analytics",
+        "CISA",
+      ],
+      github: "https://github.com/ancientbrain/human-risk-app",
+      document: "https://github.com/ancientbrain/Madison",
+      demo: "https://human-risk-app-men3wbjhbbvjjxefedznuj.streamlit.app",
+      image: "/placeholder.svg?height=400&width=600",
+    },
     {
       title: "Smart Hydroponic Farm Management System",
       description:
@@ -242,6 +265,15 @@ export default function Projects() {
                         Document
                       </button>
                     </a>
+
+                    {project.demo && (
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex-1">
+                        <button className="w-full flex items-center justify-center gap-2 h-10 px-4 py-2 rounded-md bg-blue-400 text-slate-950 font-medium hover:bg-blue-300 transition-all duration-300">
+                          <ExternalLink className="h-4 w-4" />
+                          Live Demo
+                        </button>
+                      </a>
+                    )}
                   </div>
                 </div>
 
