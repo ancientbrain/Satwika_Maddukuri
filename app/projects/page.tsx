@@ -260,17 +260,28 @@ export default function Projects() {
                       </a>
                     )}
 
-                    <a
-                      href={project.document}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 min-w-[120px]"
-                    >
-                      <button className="w-full flex items-center justify-center gap-2 h-10 px-4 py-2 rounded-md border border-blue-400 text-blue-400 bg-transparent hover:bg-blue-400/10 transition-all duration-300">
+                    {project.document && project.document !== "#" ? (
+                      <a
+                        href={project.document}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 min-w-[120px]"
+                      >
+                        <button className="w-full flex items-center justify-center gap-2 h-10 px-4 py-2 rounded-md border border-blue-400 text-blue-400 bg-transparent hover:bg-blue-400/10 transition-all duration-300">
+                          <FileText className="h-4 w-4" />
+                          Document
+                        </button>
+                      </a>
+                    ) : (
+                      <button
+                        disabled
+                        title="Document coming soon"
+                        className="flex-1 min-w-[120px] flex items-center justify-center gap-2 h-10 px-4 py-2 rounded-md border border-slate-600 text-slate-500 bg-transparent cursor-not-allowed"
+                      >
                         <FileText className="h-4 w-4" />
-                        Document
+                        Doc soon
                       </button>
-                    </a>
+                    )}
                   </div>
                 </div>
 
