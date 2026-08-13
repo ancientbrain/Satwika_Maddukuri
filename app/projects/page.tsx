@@ -1,7 +1,7 @@
 "use client"
 
 import { Linkedin, Github, Mail } from "lucide-react"
-import { FileText, Code, Shield, Database, Network, Server, Cpu, ChevronDown } from "lucide-react"
+import { FileText, Code, Shield, Database, Network, Server, Cpu, ChevronDown, ExternalLink } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import BackgroundAnimation from "../components/background-animation"
@@ -17,6 +17,16 @@ export default function Projects() {
   }
 
   const projects = [
+    {
+      title: "Risk Quorum",
+      description:
+        "A structured, role-gated cybersecurity risk governance tool — built to model how security teams resolve contested findings through stakeholder review and auditable decision-making.",
+      technologies: ["GRC", "NIST SP 800-30", "ISO 27001"],
+      github: "https://github.com/ancientbrain/Risk-Quorum",
+      website: "https://riskquorum.lovable.app",
+      document: "#",
+      image: "/projects/risk-quorum.png",
+    },
     {
       title: "Smart Hydroponic Farm Management System",
       description:
@@ -228,20 +238,50 @@ export default function Projects() {
                   </div>
 
                   {/* Buttons */}
-                  <div className="flex gap-3 relative z-10 mt-auto pt-4">
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <div className="flex flex-wrap gap-3 relative z-10 mt-auto pt-4">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex-1 min-w-[120px]">
                       <button className="w-full flex items-center justify-center gap-2 h-10 px-4 py-2 rounded-md border border-blue-400 text-blue-400 bg-transparent hover:bg-blue-400/10 transition-all duration-300">
                         <Github className="h-4 w-4" />
                         Code
                       </button>
                     </a>
 
-                    <a href={project.document} target="_blank" rel="noopener noreferrer" className="flex-1">
-                      <button className="w-full flex items-center justify-center gap-2 h-10 px-4 py-2 rounded-md border border-blue-400 text-blue-400 bg-transparent hover:bg-blue-400/10 transition-all duration-300">
+                    {project.website && (
+                      <a
+                        href={project.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 min-w-[120px]"
+                      >
+                        <button className="w-full flex items-center justify-center gap-2 h-10 px-4 py-2 rounded-md border border-blue-400 text-blue-400 bg-transparent hover:bg-blue-400/10 transition-all duration-300">
+                          <ExternalLink className="h-4 w-4" />
+                          Live
+                        </button>
+                      </a>
+                    )}
+
+                    {project.document && project.document !== "#" ? (
+                      <a
+                        href={project.document}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 min-w-[120px]"
+                      >
+                        <button className="w-full flex items-center justify-center gap-2 h-10 px-4 py-2 rounded-md border border-blue-400 text-blue-400 bg-transparent hover:bg-blue-400/10 transition-all duration-300">
+                          <FileText className="h-4 w-4" />
+                          Document
+                        </button>
+                      </a>
+                    ) : (
+                      <button
+                        disabled
+                        title="Document coming soon"
+                        className="flex-1 min-w-[120px] flex items-center justify-center gap-2 h-10 px-4 py-2 rounded-md border border-slate-600 text-slate-500 bg-transparent cursor-not-allowed"
+                      >
                         <FileText className="h-4 w-4" />
-                        Document
+                        Doc soon
                       </button>
-                    </a>
+                    )}
                   </div>
                 </div>
 
