@@ -25,7 +25,7 @@ export default function EducationAndExperience() {
       institution: "Northeastern University",
       location: "Boston, Massachusetts",
       duration: "Fall 2024 - December 2026 (Expected)",
-      gpa: "3.3/4.0",
+      gpa: "3.6/4.0",
       details: [
         "Member of the NUNull club",
         "Specializing in Information security and its operations",
@@ -38,7 +38,7 @@ export default function EducationAndExperience() {
       institution: "BMS Institute of Technology and Management",
       location: "Bangalore, India",
       duration: "August 2019 - June 2023",
-      gpa: "8.35/10.0",
+      gpa: "3.37/4.0",
       details: [
         "Built projects on web development, machine learning, NLP, and Android Systems",
         "Main project: Translative article summary generator",
@@ -76,6 +76,15 @@ export default function EducationAndExperience() {
         "Worked closely with IT, Network, and Telecom teams to prioritize vulnerabilities, validate fixes, and ensure timely remediation.",
         "Communicated findings clearly through ServiceNow dashboards, patch memos, and structured documentation.",
       ],
+      techStack: {
+        tools: "Tenable • Splunk • Recorded Future • Zscaler • ServiceNow • Jira • Power Automate • Microsoft Defender • Windows Server • Azure AD",
+        impact: [
+          "Maintained strong remediation performance with 84% SLA compliance across 1200+ assets.",
+          "Reduced false vulnerability alerts by improving asset visibility and ingestion quality in Jira.",
+          "Strengthened SOC triage accuracy by validating alerts using Recorded Future and sandbox analysis.",
+          "Improved monitoring visibility by co-building a multi-section Splunk dashboard for Zscaler.",
+        ],
+      },
       link: "#",
     },
     {
@@ -98,6 +107,14 @@ export default function EducationAndExperience() {
         "Coordinated with internal teams and external stakeholders to resolve data discrepancies, align reporting requirements, and ensure seamless communication.",
         "Supported decision-making by delivering accurate, timely data summaries tailored to stakeholder needs.",
       ],
+      techStack: {
+        tools: "Excel (Advanced) • Data Validation • Pivot Tables • Workflow Mapping • Documentation Systems • Stakeholder Communication",
+        impact: [
+          "Improved data accuracy and reporting reliability across operational workflows.",
+          "Reduced documentation retrieval time through structured record-keeping systems.",
+          "Enabled faster decision-making with clear, insight-driven operational reports.",
+        ],
+      },
       link: "#",
     },
     {
@@ -303,6 +320,25 @@ export default function EducationAndExperience() {
   })}
                         </ul>
                       </div>
+                      {exp.techStack && (
+                        <div className="grid gap-4 rounded-lg border border-blue-400/20 bg-blue-950/20 p-4 md:grid-cols-2">
+                          <div>
+                            <h4 className="mb-2 text-sm font-semibold text-blue-300">Tools Used</h4>
+                            <p className="text-sm leading-6 text-gray-400">{exp.techStack.tools}</p>
+                          </div>
+                          <div>
+                            <h4 className="mb-2 text-sm font-semibold text-blue-300">Key Impact</h4>
+                            <ul className="space-y-2 text-sm text-gray-400">
+                              {exp.techStack.impact.map((item) => (
+                                <li key={item} className="flex items-start gap-2">
+                                  <ChevronRight className="mt-1 h-4 w-4 flex-shrink-0 text-blue-400/70" />
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </motion.div>
