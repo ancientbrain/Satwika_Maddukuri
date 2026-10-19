@@ -50,7 +50,7 @@ export default function EducationAndExperience() {
 
   const experience = [
     {
-      title: "Cybersecurity Co-op",
+      title: "Cybersecurity Analyst Co-Op",
       company: "Massachusetts State Lottery Commission",
       location: "Braintree, MA",
       duration: "July 2025 - December 2025",
