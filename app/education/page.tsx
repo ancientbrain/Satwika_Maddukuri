@@ -30,7 +30,8 @@ export default function EducationAndExperience() {
         "Member of the NUNull club",
         "Specializing in Information security and its operations",
         "Built applications in Java and implemented a transactive model with SQL",
-        "Courses: INFO7473 Operations Risk Management for Engineering, TELE6300 Communication and Network Security, Cybersecurity and Compliance, Linux for Network Engineers, Branding and AI, Business Process Engineering",
+        "Courses: INFO7473 Operations Risk Management for Engineering, TELE6300 Communication and Network Security",
+        "Subjects: Cybersecurity and Compliance; Linux for Network Engineers; Branding and AI; Business Process Engineering",
       ],
     },
     {
