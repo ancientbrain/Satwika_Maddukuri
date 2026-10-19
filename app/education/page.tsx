@@ -30,7 +30,7 @@ export default function EducationAndExperience() {
         "Member of the NUNull club",
         "Specializing in Information security and its operations",
         "Built applications in Java and implemented a transactive model with SQL",
-        "Courses: INFO7473 Operations Risk Management for Engineering, TELE6300 Communication and Network Security",
+        "Courses: INFO7473 Operations Risk Management for Engineering, TELE6300 Communication and Network Security, Cybersecurity and Compliance, Linux for Network Engineers, Branding and AI, Business Process Engineering",
       ],
     },
     {
@@ -323,7 +323,7 @@ export default function EducationAndExperience() {
                       {exp.techStack && (
                         <div className="grid gap-4 rounded-lg border border-blue-400/20 bg-blue-950/20 p-4 md:grid-cols-2">
                           <div>
-                            <h4 className="mb-2 text-sm font-semibold text-blue-300">Tools Used</h4>
+                            <h4 className="mb-2 text-sm font-semibold text-blue-300">Tech Stack</h4>
                             <p className="text-sm leading-6 text-gray-400">{exp.techStack.tools}</p>
                           </div>
                           <div>
