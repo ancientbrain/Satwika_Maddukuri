@@ -25,12 +25,12 @@ export default function EducationAndExperience() {
       institution: "Northeastern University",
       location: "Boston, Massachusetts",
       duration: "Fall 2024 - December 2026 (Expected)",
-      gpa: "3.3/4.0",
+      gpa: "3.6/4.0",
       details: [
         "Member of the NUNull club",
         "Specializing in Information security and its operations",
         "Built applications in Java and implemented a transactive model with SQL",
-        "Courses: INFO7473 Operations Risk Management for Engineering, TELE6300 Communication and Network Security",
+        "Courses: INFO 7374 Cybersecure & Compliance, TELE 5600 Linux for Network Engineers, INFO 7375 Branding and AI, INFO 7375 Branding and AI",
       ],
     },
     {
@@ -38,7 +38,7 @@ export default function EducationAndExperience() {
       institution: "BMS Institute of Technology and Management",
       location: "Bangalore, India",
       duration: "August 2019 - June 2023",
-      gpa: "8.35/10.0",
+      gpa: "3.37/4.0",
       details: [
         "Built projects on web development, machine learning, NLP, and Android Systems",
         "Main project: Translative article summary generator",
@@ -50,19 +50,41 @@ export default function EducationAndExperience() {
 
   const experience = [
     {
-      title: "Cybersecurity Co-op",
+      title: "Cybersecurity Analyst Co-Op",
       company: "Massachusetts State Lottery Commission",
       location: "Braintree, MA",
       duration: "July 2025 - December 2025",
       type: "Co-op",
       details: [
-        "Conducted vulnerability management using Tenable, scanning and prioritizing vulnerabilities, and creating ServiceNow tickets for remediation by the networking team",
-        "Authored detailed patch memos and collaborated with IT staff via Microsoft Teams to clarify mitigation steps and ensure timely resolution",
-        "Implemented a Jira–Tenable exception tracking workflow to improve visibility and follow-up for vulnerabilities requiring extended remediation",
-        "Supported threat detection operations by investigating alerts, conducting research, and verifying findings across tools such as Recorded Future, Splunk, and Microsoft Defender; documented results with analyst notes",
-        "Designed and maintained structured documentation repositories on SharePoint, including developing guides, standards, and approval workflows using Power Automate",
-        "Authored playbooks and remediation reports to standardize alert response and operational workflows",
+        "🔐 Security Operations & Threat Analysis",
+        "Investigated SOC alerts using Recorded Future, Splunk, and Microsoft Defender; performed sandbox analysis to validate malicious behavior and reduce false positives.",
+        "Conducted weekly threat-intel reviews and documented findings to support SOC triage and escalation workflows.",
+        "Analyzed identity, endpoint, and network logs to distinguish real threats from noise, improving alert fidelity.",
+        "🛡️ Vulnerability & Exposure Management",
+        "Managed automated Tenable scanning across 1200+ assets, identifying 50+ new vulnerabilities monthly, including critical exposures requiring immediate remediation.",
+        "Coordinated patching and configuration fixes with IT, Network, and Telecom teams; maintained 84% SLA compliance.",
+        "Authored patch memos, validated remediation, and documented accepted exceptions for audit readiness.",
+        "📊 Splunk Engineering & Dashboard Development",
+        "Collaborated with a colleague to build a Splunk dashboard for Zscaler, integrating ingestion pipelines and custom queries.",
+        "Developed a multi-section dashboard (3 modules) to visualize Zscaler logs, user activity, and security events for improved monitoring.",
+        "Built Splunk data tables to identify outdated, unmanaged, and shadow systems, reducing false vulnerability alerts.",
+        "🧩 Automation, SOPs & Workflow Optimization",
+        "Created 13 SOPs and playbooks covering alert triage, vulnerability handling, documentation standards, and operational workflows.",
+        "Built Power Automate workflows to streamline documentation routing, approvals, and reporting.",
+        "Standardized remediation and alert-response processes to improve consistency and reduce manual effort.",
+        "🤝 Cross-Team Collaboration",
+        "Worked closely with IT, Network, and Telecom teams to prioritize vulnerabilities, validate fixes, and ensure timely remediation.",
+        "Communicated findings clearly through ServiceNow dashboards, patch memos, and structured documentation.",
       ],
+      techStack: {
+        tools: "Tenable • Splunk • Recorded Future • Zscaler • ServiceNow • Jira • Power Automate • Microsoft Defender • Windows Server • Azure AD",
+        impact: [
+          "Maintained strong remediation performance with 84% SLA compliance across 1200+ assets.",
+          "Reduced false vulnerability alerts by improving asset visibility and ingestion quality in Jira.",
+          "Strengthened SOC triage accuracy by validating alerts using Recorded Future and sandbox analysis.",
+          "Improved monitoring visibility by co-building a multi-section Splunk dashboard for Zscaler.",
+        ],
+      },
       link: "#",
     },
     {
@@ -72,11 +94,27 @@ export default function EducationAndExperience() {
       duration: "January 2023 - March 2023",
       type: "Internship",
       details: [
-        "Designed and maintained data collection systems, ensuring data accuracy and integrity to support critical decision making",
-        "Generated actionable insights by analyzing operational data and producing dynamic reports on key trends",
-        "Coordinated with cross-functional teams and external stakeholders to facilitate seamless communication and problem resolution",
-        "Organized comprehensive documentation and structured records to enhance accessibility and streamline processes",
+        "🔧 Data Engineering & System Design",
+        "Designed and maintained structured data-collection systems using Excel and custom templates, ensuring high-integrity datasets for operational and compliance reporting.",
+        "Implemented validation rules and consistency checks that reduced data-quality issues and improved decision-making accuracy.",
+        "📊 Data Analytics & Insight Generation",
+        "Analyzed multi-source operational datasets to identify workflow bottlenecks, resource gaps, and performance trends.",
+        "Built dynamic reports and dashboards that translated raw data into actionable insights for leadership and program managers.",
+        "🔁 Process Optimization & Workflow Structuring",
+        "Organized and standardized documentation repositories, improving accessibility and reducing retrieval time for critical records.",
+        "Streamlined operational workflows by restructuring record-keeping processes, enabling faster reporting cycles and smoother cross-team coordination.",
+        "🤝 Cross-Functional Collaboration",
+        "Coordinated with internal teams and external stakeholders to resolve data discrepancies, align reporting requirements, and ensure seamless communication.",
+        "Supported decision-making by delivering accurate, timely data summaries tailored to stakeholder needs.",
       ],
+      techStack: {
+        tools: "Excel (Advanced) • Data Validation • Pivot Tables • Workflow Mapping • Documentation Systems • Stakeholder Communication",
+        impact: [
+          "Improved data accuracy and reporting reliability across operational workflows.",
+          "Reduced documentation retrieval time through structured record-keeping systems.",
+          "Enabled faster decision-making with clear, insight-driven operational reports.",
+        ],
+      },
       link: "#",
     },
     {
@@ -271,14 +309,36 @@ export default function EducationAndExperience() {
                       </div>
                       <div className="rounded-lg bg-slate-800/30 p-4 transition-all duration-200 hover:bg-slate-800/50">
                         <ul className="space-y-3 text-sm text-gray-400">
-                          {exp.details.map((detail, i) => (
-                            <li key={i} className="flex items-start gap-3">
-                              <ChevronRight className="mt-1 h-4 w-4 text-blue-400/70 flex-shrink-0" />
-                              {detail}
-                            </li>
-                          ))}
+  {exp.details.map((detail, i) => {
+  const isSectionHeading = /^(🔐|🛡️|📊|🧩|🤝|🔧|🔁)/.test(detail)
+  return (
+  <li key={i} className={`flex items-start gap-3 ${isSectionHeading ? "font-semibold text-gray-200" : ""}`}>
+  {!isSectionHeading && <ChevronRight className="mt-1 h-4 w-4 text-blue-400/70 flex-shrink-0" />}
+  {detail}
+  </li>
+  )
+  })}
                         </ul>
                       </div>
+                      {exp.techStack && (
+                        <div className="grid gap-4 rounded-lg border border-blue-400/20 bg-blue-950/20 p-4 md:grid-cols-2">
+                          <div>
+                            <h4 className="mb-2 text-sm font-semibold text-blue-300">Tech Stack</h4>
+                            <p className="text-sm leading-6 text-gray-400">{exp.techStack.tools}</p>
+                          </div>
+                          <div>
+                            <h4 className="mb-2 text-sm font-semibold text-blue-300">Key Impact</h4>
+                            <ul className="space-y-2 text-sm text-gray-400">
+                              {exp.techStack.impact.map((item) => (
+                                <li key={item} className="flex items-start gap-2">
+                                  <ChevronRight className="mt-1 h-4 w-4 flex-shrink-0 text-blue-400/70" />
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </motion.div>
