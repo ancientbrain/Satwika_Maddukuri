@@ -85,10 +85,18 @@ export default function EducationAndExperience() {
       duration: "January 2023 - March 2023",
       type: "Internship",
       details: [
-        "Designed and maintained data collection systems, ensuring data accuracy and integrity to support critical decision making",
-        "Generated actionable insights by analyzing operational data and producing dynamic reports on key trends",
-        "Coordinated with cross-functional teams and external stakeholders to facilitate seamless communication and problem resolution",
-        "Organized comprehensive documentation and structured records to enhance accessibility and streamline processes",
+        "🔧 Data Engineering & System Design",
+        "Designed and maintained structured data-collection systems using Excel and custom templates, ensuring high-integrity datasets for operational and compliance reporting.",
+        "Implemented validation rules and consistency checks that reduced data-quality issues and improved decision-making accuracy.",
+        "📊 Data Analytics & Insight Generation",
+        "Analyzed multi-source operational datasets to identify workflow bottlenecks, resource gaps, and performance trends.",
+        "Built dynamic reports and dashboards that translated raw data into actionable insights for leadership and program managers.",
+        "🔁 Process Optimization & Workflow Structuring",
+        "Organized and standardized documentation repositories, improving accessibility and reducing retrieval time for critical records.",
+        "Streamlined operational workflows by restructuring record-keeping processes, enabling faster reporting cycles and smoother cross-team coordination.",
+        "🤝 Cross-Functional Collaboration",
+        "Coordinated with internal teams and external stakeholders to resolve data discrepancies, align reporting requirements, and ensure seamless communication.",
+        "Supported decision-making by delivering accurate, timely data summaries tailored to stakeholder needs.",
       ],
       link: "#",
     },
@@ -285,7 +293,7 @@ export default function EducationAndExperience() {
                       <div className="rounded-lg bg-slate-800/30 p-4 transition-all duration-200 hover:bg-slate-800/50">
                         <ul className="space-y-3 text-sm text-gray-400">
   {exp.details.map((detail, i) => {
-  const isSectionHeading = exp.title === "Cybersecurity Co-op" && i > 0 && detail.length < 60 && !detail.endsWith(".")
+  const isSectionHeading = /^(🔐|🛡️|📊|🧩|🤝|🔧|🔁)/.test(detail)
   return (
   <li key={i} className={`flex items-start gap-3 ${isSectionHeading ? "font-semibold text-gray-200" : ""}`}>
   {!isSectionHeading && <ChevronRight className="mt-1 h-4 w-4 text-blue-400/70 flex-shrink-0" />}
