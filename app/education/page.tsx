@@ -56,23 +56,23 @@ export default function EducationAndExperience() {
       duration: "July 2025 - December 2025",
       type: "Co-op",
       details: [
-        "Security Operations & Threat Analysis",
+        "🔐 Security Operations & Threat Analysis",
         "Investigated SOC alerts using Recorded Future, Splunk, and Microsoft Defender; performed sandbox analysis to validate malicious behavior and reduce false positives.",
         "Conducted weekly threat-intel reviews and documented findings to support SOC triage and escalation workflows.",
         "Analyzed identity, endpoint, and network logs to distinguish real threats from noise, improving alert fidelity.",
-        "Vulnerability & Exposure Management",
+        "🛡️ Vulnerability & Exposure Management",
         "Managed automated Tenable scanning across 1200+ assets, identifying 50+ new vulnerabilities monthly, including critical exposures requiring immediate remediation.",
         "Coordinated patching and configuration fixes with IT, Network, and Telecom teams; maintained 84% SLA compliance.",
         "Authored patch memos, validated remediation, and documented accepted exceptions for audit readiness.",
-        "Splunk Engineering & Dashboard Development",
+        "📊 Splunk Engineering & Dashboard Development",
         "Collaborated with a colleague to build a Splunk dashboard for Zscaler, integrating ingestion pipelines and custom queries.",
         "Developed a multi-section dashboard (3 modules) to visualize Zscaler logs, user activity, and security events for improved monitoring.",
         "Built Splunk data tables to identify outdated, unmanaged, and shadow systems, reducing false vulnerability alerts.",
-        "Automation, SOPs & Workflow Optimization",
+        "🧩 Automation, SOPs & Workflow Optimization",
         "Created 13 SOPs and playbooks covering alert triage, vulnerability handling, documentation standards, and operational workflows.",
         "Built Power Automate workflows to streamline documentation routing, approvals, and reporting.",
         "Standardized remediation and alert-response processes to improve consistency and reduce manual effort.",
-        "Cross-Team Collaboration",
+        "🤝 Cross-Team Collaboration",
         "Worked closely with IT, Network, and Telecom teams to prioritize vulnerabilities, validate fixes, and ensure timely remediation.",
         "Communicated findings clearly through ServiceNow dashboards, patch memos, and structured documentation.",
       ],
@@ -284,12 +284,15 @@ export default function EducationAndExperience() {
                       </div>
                       <div className="rounded-lg bg-slate-800/30 p-4 transition-all duration-200 hover:bg-slate-800/50">
                         <ul className="space-y-3 text-sm text-gray-400">
-                          {exp.details.map((detail, i) => (
-                            <li key={i} className="flex items-start gap-3">
-                              <ChevronRight className="mt-1 h-4 w-4 text-blue-400/70 flex-shrink-0" />
-                              {detail}
-                            </li>
-                          ))}
+  {exp.details.map((detail, i) => {
+  const isSectionHeading = exp.title === "Cybersecurity Co-op" && i > 0 && detail.length < 60 && !detail.endsWith(".")
+  return (
+  <li key={i} className={`flex items-start gap-3 ${isSectionHeading ? "font-semibold text-gray-200" : ""}`}>
+  {!isSectionHeading && <ChevronRight className="mt-1 h-4 w-4 text-blue-400/70 flex-shrink-0" />}
+  {detail}
+  </li>
+  )
+  })}
                         </ul>
                       </div>
                     </div>
