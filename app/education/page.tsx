@@ -228,8 +228,8 @@ export default function EducationAndExperience() {
                               </li>
                               <li className="flex items-start gap-3">
                                 <ChevronRight className="mt-1 h-4 w-4 text-blue-400/70 flex-shrink-0" />
-                                Courses: INFO7473 Operations Risk Management for Engineering, TELE6300 Communication and
-                                Network Security
+                                Courses: INFO 7374 Cybersecure & Compliance, TELE 5600 Linux for Network Engineers,
+                                INFO 7375 Branding and AI, INFO 7375 Branding and AI
                               </li>
                             </>
                           ) : (
