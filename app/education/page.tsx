@@ -30,7 +30,7 @@ export default function EducationAndExperience() {
         "Member of the NUNull club",
         "Specializing in Information security and its operations",
         "Built applications in Java and implemented a transactive model with SQL",
-        "Courses: INFO 7374 Cybersecure & Compliance, TELE 5600 Linux for Network Engineers, INFO 7375 Branding and AI, INFO 7375 Branding and AI",
+        "Courses: INFO7473 Operations Risk Management for Engineering, TELE6300 Communication and Network Security, INFO 7374 Cybersecure & Compliance, TELE 5600 Linux for Network Engineers, INFO 7375 Branding and AI, INFO 7375 Branding and AI",
       ],
     },
     {
@@ -228,8 +228,8 @@ export default function EducationAndExperience() {
                               </li>
                               <li className="flex items-start gap-3">
                                 <ChevronRight className="mt-1 h-4 w-4 text-blue-400/70 flex-shrink-0" />
-                                Courses: INFO 7374 Cybersecure & Compliance, TELE 5600 Linux for Network Engineers,
-                                INFO 7375 Branding and AI, INFO 7375 Branding and AI
+                                Courses: INFO7473 Operations Risk Management for Engineering, TELE6300 Communication and Network Security,
+                                INFO 7374 Cybersecure & Compliance, TELE 5600 Linux for Network Engineers, INFO 7375 Branding and AI, INFO 7375 Branding and AI
                               </li>
                             </>
                           ) : (
