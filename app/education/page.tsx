@@ -57,7 +57,7 @@ export default function EducationAndExperience() {
       type: "Co-op",
       details: [
         "🔐 Security Operations & Threat Analysis",
-        "Investigated SOC alerts using Recorded Future, Splunk, and Microsoft Defender; performed sandbox analysis to validate malicious behavior and reduce false positives.",
+        "Investigated SOC alerts using Recorded Future and Splunk; performed sandbox analysis to validate malicious behavior and reduce false positives.",
         "Conducted weekly threat-intel reviews and documented findings to support SOC triage and escalation workflows.",
         "Analyzed identity, endpoint, and network logs to distinguish real threats from noise, improving alert fidelity.",
         "🛡️ Vulnerability & Exposure Management",
