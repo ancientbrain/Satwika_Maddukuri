@@ -77,7 +77,7 @@ export default function EducationAndExperience() {
         "Communicated findings clearly through ServiceNow dashboards, patch memos, and structured documentation.",
       ],
       techStack: {
-        tools: "Tenable • Splunk • Recorded Future • Zscaler • ServiceNow • Jira • Power Automate • Microsoft Defender • Windows Server • Azure AD",
+        tools: "Tenable • Splunk • Recorded Future • Zscaler • ServiceNow • Jira • Power Automate • Windows Server • Azure AD",
         impact: [
           "Maintained strong remediation performance with 84% SLA compliance across 1200+ assets.",
           "Reduced false vulnerability alerts by improving asset visibility and ingestion quality in Jira.",
@@ -113,6 +113,27 @@ export default function EducationAndExperience() {
           "Improved data accuracy and reporting reliability across operational workflows.",
           "Reduced documentation retrieval time through structured record-keeping systems.",
           "Enabled faster decision-making with clear, insight-driven operational reports.",
+        ],
+      },
+      link: "#",
+    },
+    {
+      title: "Graduate Teaching Assistant",
+      company: "Northeastern University SEIS",
+      location: "Boston, Massachusetts, United States",
+      duration: "Sep 2026 - Present · 2 mos",
+      type: "Part-time",
+      details: [
+        "Supporting course coordination and student learning for INFO 6500: Managing Operational Risk for Engineering.",
+        "Assisting Professor Kaleigh Sieczkowski, MS, with course activities, communication, and academic support.",
+        "Helping students engage with risk management concepts through discussions, guidance, and structured feedback.",
+      ],
+      techStack: {
+        tools: "Risk Management, Operational Risk Management",
+        impact: [
+          "Enhanced student understanding of operational risk frameworks and management practices.",
+          "Facilitated effective course communication and coordinated learning support for students.",
+          "Contributed to improved academic outcomes through structured feedback and guidance.",
         ],
       },
       link: "#",
